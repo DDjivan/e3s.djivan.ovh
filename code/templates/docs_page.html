@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/style_police.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/docs_style.css') }}">
+
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <script src="{{ url_for('static', filename='script/mathjax_settings.js') }}"></script>
+
+  <title>WikiE3S {{ py_title }}</title>
+  <link rel="icon" href="{{ url_for('static', filename='SVG/RUBY wireframe black alpha.svg') }}" type="image/x-icon">
+
+</head>
+
+
+
+<body>
+
+  <div id="py_md">
+    {{ py_md|safe }}
+  </div>
+
+  <br>
+
+
+  <script>
+    const svgIconLinks = {
+      fallback: "{{ url_for('static', filename='SVG/square.svg') }}",
+      internal: "{{ url_for('static', filename='SVG/link-square-svgrepo-com.svg') }}",
+      external: "{{ url_for('static', filename='SVG/external-link-svgrepo-com.svg') }}",
+      flathub: "{{ url_for('static', filename='SVG/icon-link-flatpak_bw.svg') }}",
+      email: "{{ url_for('static', filename='SVG/email-svgrepo-com.svg') }}"
+    };  
+  </script>
+  <script src="{{ url_for('static', filename='script/script_link_icons.js') }}"></script>
+</body>
+
+
+
+
+
+</html>

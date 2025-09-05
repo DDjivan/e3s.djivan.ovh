@@ -1,0 +1,11 @@
+:root {
+    --primary-color: oklch(0.6885 0.1175 194.77);
+    --light-color: oklch(0.8738 0.0576 194.77);
+    --dark-color: oklch(46.618% 0.07755 194.861);
+    --my-color: oklch(58.96% 0.22938 358.598);
+    --background-color: oklch(93.014% 0.00941 172.421);
+    --background-code-color: oklch(93.014% 0.00941 172.421 / 25%);
+    --background-pre-color: oklch(93.014% 0.00941 172.421 / 50%);
+    --body-color: oklch(54.166% 0.03181 258.403);
+    --h-color: oklch(0.5 0 0);
+}

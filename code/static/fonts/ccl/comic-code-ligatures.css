@@ -1,0 +1,9 @@
+/* comic-code-ligatures */
+@font-face {
+	font-family: "Comic Code Ligatures";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Comic Code Ligatures Regular"), local("ComicCodeLigatures-Regular"), url(comic-code-ligatures.woff2) format("woff2");
+}
+

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Junicode';
+    src: url('{{ url_for('static', filename='fonts/j/JunicodeVF-Roman.woff2') }}') format('woff2');
+         /* url('{{ url_for('static', filename='fonts/JunicodeVF-Roman.woff') }}') format('woff'), */
+         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('{{ url_for('static', filename='fonts/bg/BricolageGrotesque-Regular.woff2') }}') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 1% 10%;
+} */
+body,
+h1, h2, h3, h4, h5, h6, 
+p, ul, li, table,
+button {
+    font-family: 'Bricolage Grotesque', Helvetica, Arial, sans-serif;
+}
+
+@import url("/static/fonts/ccl/comic-code-ligatures.css");
+
+code {
+    font-family: 'Comic Code Ligatures', 'Courier New', Courier, monospace;
+    font-size: 80%;
+    outline-offset: 4px;
+    border-radius: 8px;
+    /* background-color: oklch(1 0.1 150 / 10%); */
+}
+
+/* ::selection {
+    background-color: oklch(0.9015 0.0468 32.8);
+} */

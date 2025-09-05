@@ -1,0 +1,145 @@
+@import url("style_palette.css");
+
+body {
+    background-color: var(--background-color); 
+    margin: 0;
+    padding-top: 100px; 
+    padding-bottom: 50%;
+    color: var(--body-color);
+}
+
+#py_md {
+    max-width: 680px; /* page container width */
+    margin: 0 auto; /* center */
+    padding: 20px; /* padding inside container */
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    line-height: 1.6; 
+}
+
+h1, h2, h3 {
+    color: var(--h-color); 
+}
+
+p, ul, ol {
+    /* margin-bottom: 15px; space between paragraphs */
+    /* color: var(--body-color); */
+    color:inherit;
+}
+
+/* lists */
+ul, ol {
+    margin-left: -10px; 
+}
+
+code {
+    background-color: var(--background-code-color); 
+    padding: 2px;
+}
+
+pre {
+    padding: 10px 10px 20px 20px;
+    border-radius: 4px;
+    background-color: var(--background-pre-color); 
+    overflow-x: auto; /* enable horizontal scrolling */
+    white-space: pre; /* preserve whitespace and line breaks */
+}
+
+pre code {
+    background-color: transparent; /* remove background color */
+    color: inherit; /* inherit text color from pre */
+}
+
+blockquote {
+    border: 0px solid var(--primary-color);
+    border-left-width: 2px;
+    padding-left: 10px;
+    color: var(--dark-color);
+}
+blockquote p {
+    color: var(--dark-color);
+}
+
+img {
+    max-width: 100%;  /* ensure images do not exceed width of container */
+    height: auto;  /* auto = same aspect ratio */
+    display: block;  /* center the image */
+    /* margin: 0 auto; */ /* center the image horizontally */
+}
+
+a {
+    color: var(--primary-color);
+    position: relative;
+    padding-right: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover,
+a:active {
+    outline: 1.25px solid var(--primary-color);
+    outline-offset: 1px;
+    border-radius: 4px;
+    background: oklch(1 0 150 / 10%);
+}
+a:active {
+    color: var(--light-color);
+}
+
+.icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+/*————————————————————————————————————————————————————————————————————————————*/
+
+img {
+    max-width: 100%;  /* ensure images do not exceed width of container */
+    height: auto;  /* auto = same aspect ratio */
+    display: block;  /* center the image */
+    /* margin: 0 auto; */ /* center the image horizontally */
+}
+
+table {
+    border-collapse: collapse;  /* make sure borders are merged */
+    width: 100%;
+}
+
+th, td {
+    border-color: var(--primary-color);
+
+    border-width: 4px;
+    border-style: double;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    border-style: solid;
+    text-align: center;
+    font-size: large;
+}
+
+/*————————————————————————————————————————————————————————————————————————————*/
+
+::selection {
+    background-color: var(--light-color);
+}
+
+/*————————————————————————————————————————————————————————————————————————————*/
+
+@media (max-width: 600px) {
+    #py_md {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    body {
+        padding: 10px; /* Reduce body padding on smaller screens */
+    }
+}
