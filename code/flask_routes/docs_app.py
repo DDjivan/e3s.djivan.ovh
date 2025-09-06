@@ -30,7 +30,7 @@ def web_markdown(filename:str) -> str:
 
     titlename = f' – {filename}'
     if filename.endswith('.md'):
-        filenickname, _ = os.path.splitext(filename)
+        filenickname, _ = os.path.splitext(os.path.basename(filename))
         titlename = f' – {filenickname}'
         
 
