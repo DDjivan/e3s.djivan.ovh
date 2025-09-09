@@ -14,7 +14,7 @@ app.register_blueprint(app_docs)
 ##————————————————————————————————————————————————————————————————————————————##
  
 if (__name__ == '__main__'):
-    web_parser = ArgumentParser(description='Deploy app.')
+    web_parser = ArgumentParser(description='Run website app.')
     web_parser.add_argument(
         '-d', '--debug', #type=?, choices=?, required=False,
         # default=False,

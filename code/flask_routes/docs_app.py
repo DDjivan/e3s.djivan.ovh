@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, redirect, url_for
 from libraries.md_util import *
 from json import load as j_load
 import os
@@ -68,12 +68,19 @@ def web_markdown(filename:str) -> str:
     html_data = md_to_html(data)
 
     return render_template('docs_page.html', 
-        py_md=html_data, py_title=titlename)
+        py_md=html_data, py_title=titlename,
+        )
 
 
 
 @app_docs.route('/')
 def web_root() -> str:
-    return web_markdown('Bienvenue.md')
+    return redirect(url_for('docs.web_root_fr'))
 
+@app_docs.route('/fr/')
+def web_root_fr() -> str:
+    return redirect(url_for('docs.web_markdown', filename='fr/Bienvenue.md'))
 
+@app_docs.route('/en/')
+def web_root_en() -> str:
+    return redirect(url_for('docs.web_markdown', filename='en/Bienvenue.md'))

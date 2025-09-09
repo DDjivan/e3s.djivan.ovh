@@ -9,6 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='style/style_police.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/style_button.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style/docs_style.css') }}">
 
   <script type="text/javascript" async
@@ -26,6 +27,32 @@
 <body>
 
   <div id="py_md">
+    <div class="button-container">
+      <button class="fancybutton" onclick="goHome()"      > 🏠 Home     </button>
+      <button class="fancybutton" onclick="moveTo('/en/')"> 🇺🇸 English  </button>
+      <button class="fancybutton" onclick="moveTo('/fr/')"> 🇫🇷 Français </button>
+    </div>
+    <script>
+    function goHome() {
+      const currentUrl = window.location.href;
+      if (currentUrl.includes('/fr/')) {
+        window.location.href = '/fr/';
+      } else if (currentUrl.includes('/en/')) {
+        window.location.href = '/en/';
+      }
+      return;
+    }
+    function moveTo(language) {
+      const currentUrl = window.location.href;
+      if (currentUrl.includes(language)) {
+        window.location.href = currentUrl;
+        return;
+      }
+      const newUrl = currentUrl.includes('/fr/') ? currentUrl.replace('/fr/', language) : currentUrl.replace('/en/', language);
+      window.location.href = newUrl;
+      return;
+    }
+    </script>
     {{ py_md|safe }}
   </div>
 

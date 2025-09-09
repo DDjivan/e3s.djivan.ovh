@@ -1,0 +1,29 @@
+@import url("style_palette.css");
+
+.fancybutton {
+    line-height: 1.2;
+    padding: 1rem 1%;
+    font-size: 1rem;
+    color: oklch(0.287 0.0742 270.58);
+    background-color: oklch(0.9911 0 0);
+    border: 2px solid oklch(0.8602 0.0018 247.84);
+    border-radius: 8px;
+    box-shadow: 0px 1px 0px 1px oklch(0.8602 0.0018 247.84);
+    text-align: left;
+    /* margin: 0px 1px 0px 1px; */
+}
+
+.fancybutton:hover {
+    border-color: var(--primary-color);
+}
+
+.fancybutton:active {
+    background-color: var(--light-color);
+}
+
+
+
+.button-container {
+    display: flex;
+    gap: 4%; 
+}
